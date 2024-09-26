@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enjoy unlimited music and vieos at Jalsoft music store</title>
+    <link rel="shortcut icon" href="./public/assets/images/jalsoft player site.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./public/styles/animate.min.css">
+    <link rel="stylesheet" href="./public/styles/aos.css">
+    <link rel="stylesheet" href="./public/styles/bootstrap.css">
+    <link rel="stylesheet" href="./public/styles/sweetalert2.min.css">
+    <link rel="stylesheet" href="./public/styles/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bggg">
+        <div class="container-fluid">
+            <a href="./home" class="navbar-brand">
+                <img src="./public/assets/images/headphone2.jpg" alt="" style="width:60px;border-radius:50%;">
+                JalSoft
+            </a>
+            <button data-bs-toggle="collapse" data-bs-target="#navBar" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse ms-5" id="navBar">
+                <ul class="navbar-nav">
+                    <li class="navbar-item">
+                        <a href="./home" class="nav-link">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./downloads" class="nav-link">Downloads</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./musicplayer" class="nav-link">Music Player</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./search" class="nav-link">Search</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./blog" class="nav-link">Blog</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./playlist" class="nav-link">Playlists</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./about" class="nav-link active">About us</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./profile" class="nav-link">Profile</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./privacy" class="nav-link">Privacy</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./contact" class="nav-link">Contact us</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./terms" class="nav-link">Terms of use</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div class="row row-cols d-flex flex-wrap">
+            <h4 class="text-info">Welcome to JalSoft library of videos and songs</h4>
+            <div class="col border-0 w-100 ">
+                <div class="card border-0 mt-4">
+                    <video src="./public/assets/images/young_man_dancing_hapily.mp4" class="card-img-top videoP" loop muted id="videoP"></video>
+                    <div class="m-1">
+                        <p class="m-2 text-light">Join the other millions of people world wide enjoying the music library from JalSoft. <br>
+                             Update your sound and video track with us it is very simple. <br>
+                            Click <a class="text-info" href="./search/">here</a> to get started!.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h4 class="text-light">
+                About us
+            </h4>
+            <div class="col text-light">
+                JalSoft is a community that was cofounded By Calvince Owino and has gone through transformations till the release of this music and video store.We as JalSoft work tirelessly to ensure that you remain at the top of the list with the latest hits and the brand new songs effortlessly.We make it easier for you to get the gist of what the song is about by Providing the lyrics as well.In JalSoft music gets to be music since we work day in day out to make you stay at the top of the loop.
+            </div>
+            <h5 class="text-warning">JalSoft,Your ultimate destination for music and video downloads.</h5>
+        </div>
+        <div class="row mt-3">
+            <h5 class="text-info">
+                Stunning moments that JalSoft has created in homes
+            </h5>
+            <div class="col m-3 d-flex flex-wrap">
+                <div class="card m-2 border-0">
+                    <video src="./public/assets/images/family_entertainment.mp4" class="card-img-top videoP" loop muted id="videoP"></video>
+                    <p class="m-1 text-info">We bring family together</p>
+                </div>
+                <div class="card m-2 border-0">
+                    <video src="./public/assets/images/old_people_dancing.mp4" class="card-img-top videoP" loop muted id="videoP"></video>
+                    <p class="m-1 text-info">Every age catered for</p>
+                </div>
+                <div class="card m-2 border-0">
+                    <video src="./public/assets/images/confusion_dance.mp4" class="card-img-top videoP" loop muted id="videoP"></video>
+                    <p class="m-1 text-info">Provide youths the best</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-info">
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5">
+                    <p>Facebook:</p>
+                    <p>Twitter:</p>
+                    <p>Discord:</p>
+                    <p>Github:</p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </footer>
+</body>
+<script>
+    const videoP = document.querySelectorAll('#videoP');
+    window.onload = function(){
+        videoP.forEach(video=>{
+            video.play();
+        });
+    }
+</script>
+<script src="./public/scripts/aos.js"></script>
+<script src="./public/scripts/bootstrap.bundle.min.js"></script>
+<script src="./public/scripts/jquery-3.6.0.min.js"></script>
+<script src="./public/scripts/sweetalert2@11.js"></script>
+</html>

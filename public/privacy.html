@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enjoy unlimited music and vieos at Jalsoft music store</title>
+    <link rel="shortcut icon" href="./public/assets/images/jalsoft player site.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./public/styles/animate.min.css">
+    <link rel="stylesheet" href="./public/styles/aos.css">
+    <link rel="stylesheet" href="./public/styles/bootstrap.css">
+    <link rel="stylesheet" href="./public/styles/sweetalert2.min.css">
+    <link rel="stylesheet" href="./public/styles/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bggg">
+        <div class="container-fluid">
+            <a href="./home" class="navbar-brand">
+                <img src="./public/assets/images/headphone2.jpg" alt="" style="width:60px;border-radius:50%;">
+                JalSoft
+            </a>
+            <button data-bs-toggle="collapse" data-bs-target="#navBar" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse ms-5" id="navBar">
+                <ul class="navbar-nav">
+                    <li class="navbar-item">
+                        <a href="./home" class="nav-link">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./download" class="nav-link">Downloads</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./musicplayer" class="nav-link">Music Player</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./search" class="nav-link">Search</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./blog" class="nav-link">Blog</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./playlist" class="nav-link">Playlists</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./about" class="nav-link">About us</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./profile" class="nav-link">Profile</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./privacy" class="nav-link active">Privacy</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./contact" class="nav-link">Contact us</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./terms" class="nav-link">Terms of use</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <h4 class="text-info">
+                Privacy Terms
+            </h4>
+            <h5 class="text-warning mt-3">
+                Everything you do here is secure do not stress yourself about your security! We have it at hand
+            </h5>
+            <div class="col m-5 text-light col-md-8">
+                <div class="card border-0">
+                    <video src="./public/assets/images/dancing_at_work.mp4" class="card-img-top" id="videoP" loop muted style="max-width:400px;"></video>
+                    <h6 class="card-title text-info mt-3">Daniel Kioko</h6>
+                    <p class="m-3 wassupgreen">
+                        I am exhilerated.In fact I am extremely thrilled.The privacy in JalSoft community is beyond suspiscion.This is my tenth year accessing their services and the truth is that they are extremely out for the security of their community I have never fallen in any trap of none security as it is in many music and video communities out there. Do not hesitate join JalSoft and enjoy full blast security and privacy. <br>
+                        I can now enjoy my shower with my security at the top just getting the music.
+                    </p>
+                </div>
+                <p class="mt-4">
+                    We understand the essence of the right music with the most privacy. Our connection are secured by https and we adhere to the correct download protocols. We ensure that every file uploaded in the site is a either a video or an audio and has the correct naming conventions. We also check
+                    at the mime-type of the file format provided making sure that all in the library is not a malicious file that can tamper with you device. At Jalsoft your security is our priority and your privacy is what we value most. <br>
+                    It is at hand and no one can pirate you here!
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-info mt-5">
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5">
+                    <p>Facebook:</p>
+                    <p>Twitter:</p>
+                    <p>Discord:</p>
+                    <p>Github:</p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </footer>
+</body>
+<script>
+    const videoP = document.querySelectorAll('#videoP');
+    window.onload = ()=>{
+        videoP.forEach(video=>{
+            video.play();
+        })
+    }
+</script>
+<script src="./public/scripts/aos.js"></script>
+<script src="./public/scripts/bootstrap.bundle.min.js"></script>
+<script src="./public/scripts/jquery-3.6.0.min.js"></script>
+<script src="./public/scripts/sweetalert2@11.js"></script>
+</html>

@@ -1,0 +1,8 @@
+# src/.htaccess
+
+RewriteEngine On
+
+# Redirect all requests to router.php in the public directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ ./src/routes/router.php [QSA,L]
