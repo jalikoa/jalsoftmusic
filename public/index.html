@@ -10,7 +10,32 @@
     <link rel="stylesheet" href="./public/styles/bootstrap.css">
     <link rel="stylesheet" href="./public/styles/sweetalert2.min.css">
     <link rel="stylesheet" href="./public/styles/styles.css">
+    <style>
+        .sidebar {
+            min-width: 250px;
+            position: absolute;
+            top:85px;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            z-index: 100;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 1rem;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none;
+            }
+            .content {
+                margin-left: 0; 
+            }
+        }
+        
+    </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bggg">
         <div class="container-fluid">
@@ -43,7 +68,7 @@
                         <a href="./about" class="nav-link">About us</a>
                     </li>
                     <li class="navbar-item">
-                        <a href=".profile" class="nav-link">Profile</a>
+                        <a href="./profile" class="nav-link">Profile</a>
                     </li>
                     <li class="navbar-item">
                         <a href="./privacy" class="nav-link">Privacy</a>
@@ -58,79 +83,282 @@
             </div>
         </div>
     </nav>
+    <div class="sidebar d-none d-md-block">
+        <h4 class="mt-4 text-warning">Menu</h4>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="./home"><h4>Home</h4></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="./library">Trending</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="./search">New</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="./playlist">Artists</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="./playlist">Videos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="./playlist">Charts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="./playlist">Genres</a>
+            </li>
+            <h5 class="m-3 text-light">Library</h5>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="./playlist">Add playlists</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="./playlist">Favourites</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="./playlist">My Playlists</a>
+            </li>
+            
+        </ul>
+    </div>
     <!-- This is the end of the navigation bar here is the start of the main contents of the homepage the website is suppose to have a very spectacular outlook -->
-     <div class="container mt-4 text-light">
-        <p class="m-3 text-info lead">Explore thousands of songs and videos from your favorite artists! Download them directly to your device and enjoy your music anywhere, anytime.</p>
-        <div class="row row-cols-xs-1 w-100">
-            <div class="col col-xs-11 col-md-5 col-sm-6 col-lg-4 cols-xl-4 jalsoft-music-card m-1">
-                <h6 class="text-light">Popular Artists</h6>
-                <div class="card mt-3 border-0 position-relative">
-                    <span class="badge bg-info position-absolute start-0 top-0 m-1">Share</span>
-                    <img src="./public/assets/images/gospel.jpg" alt="" class="card-img-top">
-                    <span class="badge bg-primary position-absolute start-0 bottom-0 m-1">Hey</span>
-                    <span class="badge bg-success position-absolute start-0 bottom-0 m-1 ms-5">Hey</span>
-                    <span class="badge bg-warning position-absolute end-0 bottom-0 m-1 me-5">02:06:00</span>
-                    <span class="badge bg-success position-absolute end-0 bottom-0 m-1">Hey</span>
-                </div>
-                <div class="card mt-3 border-0 position-relative">
-                    <span class="badge bg-info position-absolute start-0 top-0 m-1">Share</span>
-                    <img src="./public/assets/images/gospel.jpg" alt="" class="card-img-top">
-                    <span class="badge bg-primary position-absolute start-0 bottom-0 m-1">Hey</span>
-                    <span class="badge bg-success position-absolute start-0 bottom-0 m-1 ms-5">Hey</span>
-                    <span class="badge bg-warning position-absolute end-0 bottom-0 m-1 me-5">02:06:00</span>
-                    <span class="badge bg-success position-absolute end-0 bottom-0 m-1">Hey</span>
+   <div class="content"> 
+    <div class="container mt-4 text-light">
+        <nav class="navbar navbar-expand-md navbar-dark bg-success">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./home">JalSoft</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./login">Sign In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./register">Sign Up</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="col col-xs-11 col-sm-5 col-md-5 col-lg-4 cols-xl-4 jalsoft-music-card m-1">
-                <h6 class="text-light">Top songs</h6>
-                <div class="card mt-3 border-0 position-relative">
-                    <span class="badge bg-info position-absolute start-0 top-0 m-1">Share</span>
-                    <img src="./public/assets/images/gospel.jpg" alt="" class="card-img-top">
-                    <span class="badge bg-primary position-absolute start-0 bottom-0 m-1">Hey</span>
-                    <span class="badge bg-success position-absolute start-0 bottom-0 m-1 ms-5">Hey</span>
-                    <span class="badge bg-warning position-absolute end-0 bottom-0 m-1 me-5">02:06:00</span>
-                    <span class="badge bg-success position-absolute end-0 bottom-0 m-1">Hey</span>
+        </nav>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Library</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Playlists</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <p class="m-3 text-info lead">Explore thousands of songs and videos from your favorite artists! Download them directly to your device and enjoy your music anywhere, anytime.</p> -->
+        <div class="row d-overflow row-cols-xs-1 mt-3 w-100 bgll jalsoft-music-card">
+            <h5 class="text-light">
+                Popular artists
+            </h5>
+            <div class="col m-2 songs-col">
+                <div class="song-card m-1">
+                    <img src="./public/assets/images/dancing.jpg" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
                 </div>
-                <div class="card mt-3 border-0 position-relative">
-                    <span class="badge bg-info position-absolute start-0 top-0 m-1">Share</span>
-                    <img src="./public/assets/images/gospel.jpg" alt="" class="card-img-top">
-                    <span class="badge bg-primary position-absolute start-0 bottom-0 m-1">Hey</span>
-                    <span class="badge bg-success position-absolute start-0 bottom-0 m-1 ms-5">Hey</span>
-                    <span class="badge bg-warning position-absolute end-0 bottom-0 m-1 me-5">02:06:00</span>
-                    <span class="badge bg-success position-absolute end-0 bottom-0 m-1">Hey</span>
+                <div class="song-card m-1">
+                    <img src="./public/assets/images/J.png" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
                 </div>
-                <div class="card mt-3 border-0 position-relative">
-                    <span class="badge bg-info position-absolute start-0 top-0 m-1">Share</span>
-                    <img src="./public/assets/images/gospel.jpg" alt="" class="card-img-top">
-                    <span class="badge bg-primary position-absolute start-0 bottom-0 m-1">Hey</span>
-                    <span class="badge bg-success position-absolute start-0 bottom-0 m-1 ms-5">Hey</span>
-                    <span class="badge bg-warning position-absolute end-0 bottom-0 m-1 me-5">02:06:00</span>
-                    <span class="badge bg-success position-absolute end-0 bottom-0 m-1">Hey</span>
+                <div class="song-card m-1">
+                    <img src="./public/assets/images/get music.jpg" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
                 </div>
-                <div class="card mt-3 border-0 position-relative">
-                    <span class="badge bg-info position-absolute start-0 top-0 m-1">Share</span>
-                    <img src="./public/assets/images/gospel.jpg" alt="" class="card-img-top">
-                    <span class="badge bg-primary position-absolute start-0 bottom-0 m-1">Hey</span>
-                    <span class="badge bg-success position-absolute start-0 bottom-0 m-1 ms-5">Hey</span>
-                    <span class="badge bg-warning position-absolute end-0 bottom-0 m-1 me-5">02:06:00</span>
-                    <span class="badge bg-success position-absolute end-0 bottom-0 m-1">Hey</span>
+                <div class="song-card m-1">
+                    <img src="./public/assets/images/background.png" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
                 </div>
-                <div class="card mt-3 border-0 position-relative">
-                    <span class="badge bg-info position-absolute start-0 top-0 m-1">Share</span>
-                    <img src="./public/assets/images/gospel.jpg" alt="" class="card-img-top">
-                    <span class="badge bg-primary position-absolute start-0 bottom-0 m-1">Hey</span>
-                    <span class="badge bg-success position-absolute start-0 bottom-0 m-1 ms-5">Hey</span>
-                    <span class="badge bg-warning position-absolute end-0 bottom-0 m-1 me-5">02:06:00</span>
-                    <span class="badge bg-success position-absolute end-0 bottom-0 m-1">Hey</span>
+                <div class="song-card m-3">
+                    <img src="./public/assets/images/background1.png" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
+                </div>
+                <div class="song-card m-1">
+                    <img src="./public/assets/images/musi_bg1.png" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
+                </div>
+                <div class="song-card m-1">
+                    <img src="./public/assets/images/headphone2.jpg" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
+                </div>
+                <div class="song-card m-1">
+                    <img src="./public/assets/images/headphone.jpg" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
                 </div>
             </div>
         </div>
-        <div class="row m-1">
-            <div class="col col-xs-11 col-sm-10 col-md-10 col-lg-8 cols-xl-8 jalsoft-music-card m-1 shadow">
-                <h5 class="text-light">Popular Artists</h5>
+
+
+
+        <!-- Thi marks the begnning of the popular songs section -->
+        <div class="row mt-3 w-100 bgll jalsoft-music-card">
+            <h5 class="text-light">Popular songs</h5>
+            <div class="col songs-col poplsongs">
+                <div class="song-card m-1">
+                    <img src="./public/assets/images/dancing.jpg" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
+                </div>
+                <div class="song-card m-1">
+                    <img src="./public/assets/images/J.png" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
+                </div>
+                <div class="song-card m-1">
+                    <img src="./public/assets/images/get music.jpg" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
+                </div>
+                <div class="song-card m-1">
+                    <img src="./public/assets/images/background.png" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
+                </div>
+                <div class="song-card m-3">
+                    <img src="./public/assets/images/background1.png" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
+                </div>
+                <div class="song-card m-1">
+                    <img src="./public/assets/images/musi_bg1.png" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
+                </div>
+                <div class="song-card m-1">
+                    <img src="./public/assets/images/headphone2.jpg" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
+                </div>
+                <div class="song-card m-1">
+                    <img src="./public/assets/images/headphone.jpg" alt="" class="song-img">
+                        <div class="song-metadata">
+                            <h5 class="artist-name text-light">
+                                Drake
+                            </h5>
+                            <span class="mt-1 wassupgreen fw-bold">
+                                Artist
+                            </span>
+                        </div>
+                </div>
             </div>
-        </div>
+        </div> 
      </div>
+    </div>
      <footer class="bg-dark text-info">
         <br>
         <div class="container">

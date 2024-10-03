@@ -1,27 +1,27 @@
 <?php
-session_start();
-require_once '../helpers/auth.php';
+require_once '../src/helpers/auth.php';
 $routes = [
-    '/enter' => '../../public/index.html',
-    '/enter/home' => '../../public/index.html',
-    '/enter/about' => '../../public/about.html',
-    '/enter/contact' => '../../public/contact.html',
-    '/enter/search' => '../../public/search.html',
-    '/enter/playlist' => '../../public/playlist.html',
-    '/enter/profile' => '../../public/profile.html',
-    '/enter/musicplayer' => '../../public/musicplayer.html',
-    '/enter/download' => '../../public/download.html',
-    '/enter/privacy' => '../../public/privacy.html',
-    '/enter/blog' => '../../public/blog.html',
-    '/enter/terms' => '../../public/terms.html',
-    '/enter/error' => '../../public/error.html',
-    '/enter/login' => '../../public/login.html'
+    '/enter' => './index.html',
+    '/enter/home' => './index.html',
+    '/enter/about' => './about.html',
+    '/enter/contact' => './contact.html',
+    '/enter/search' => './search.html',
+    '/enter/playlist' => './playlist.html',
+    '/enter/profile' => './profile.html',
+    '/enter/musicplayer' => './musicplayer.html',
+    '/enter/download' => './download.html',
+    '/enter/privacy' => './privacy.html',
+    '/enter/blog' => './blog.html',
+    '/enter/terms' => './terms.html',
+    '/enter/error' => './error.html',
+    '/enter/login' => './login.html',
+    '/enter/register' => './signup.html'
 ];
 $requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 if (array_key_exists($requestUri, $routes)) {
     include $routes[$requestUri];
 } else {
     header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
-    header("location: http://localhost/enter/error");
+    header("location: /enter/error");
 }
 ?>

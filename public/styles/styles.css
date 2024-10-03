@@ -62,3 +62,51 @@ body {
 .control-buttons {
     height:80px;
 }
+.song-card {
+    margin-left:5px;
+    width:200px;
+    height:200px;
+    margin:100px;
+}
+.song-card img {
+    margin-left:0px;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+}
+.songs-col {
+    width:fit-content;
+    padding:0px 50px;
+    display:flex;
+    overflow: auto;
+    align-items:center;
+}
+.songs-col::-webkit-scrollbar {
+-webkit-appearance:none;
+}
+.poplsongs img {
+    border-radius:10px;
+}
+/* Note should be taken the images in popular songs and artists overlap this should be investigated and solved */
+.sidebar {
+    min-width: 250px;
+    position: absolute;
+    top:85px;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    z-index: 100;
+}
+.content {
+    margin-left: 250px;
+    padding: 1rem;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    .content {
+        margin-left: 0; 
+    }
+}
